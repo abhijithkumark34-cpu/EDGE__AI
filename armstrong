@@ -1,0 +1,42 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+
+
+int main() {
+    int n ,i,h,sum=0,power ;
+    
+    printf("Enter the number to find the armstrong");
+    scanf("%d",&n);
+    
+    int temp;
+    temp=n;
+    
+    int count =0;
+      while (temp!=0){
+        
+        count++;
+       
+        temp=temp/10;}
+        printf("%d",temp);
+
+    while (n!=0){
+        h=n%10;
+        power=1;
+        for(i=0;i<count;i++){
+            power=power*h;
+        }
+        sum+=power;
+        n=n/10;
+        
+    }
+    if(sum==temp){
+        printf("the number is armstrong ");}
+        
+        else 
+        {
+            printf("this not  a armstrong");
+        }
+        return 0;
+    
+}

@@ -1,0 +1,36 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    int n, i,length;
+    printf("ENter the number of elemants ");
+    scanf("%d",&n);
+    int a[n];
+    printf("enter the elemants ");
+    for(i=0;i<n;i++){
+        scanf("%d",&a[i]);
+        
+    }
+    for(i=0;i<n;i++){
+        int length=1;
+        printf("%d",a[i]);
+        int last =a[i];
+        for(int j=i+1;j<n;j++){
+            if(a[j]>last){
+                printf("%d",a[j]);
+                length++;
+                
+            }
+        }
+    
+    if(length>1){
+        printf("The length is %d\n",length);}
+        else{
+            printf("\n");
+        }
+    
+    }
+    return 0;
+}
+  
+    

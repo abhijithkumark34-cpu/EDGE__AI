@@ -1,0 +1,39 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+   int i,n,j;
+   int length=0;
+   printf("Enter the number of elements in the array");
+   scanf("%d",&n);
+   int a[n];
+   printf("Enter all elements one by one ");
+   for(i=0;i<n;i++){
+       scanf("%d",&a[i]);
+   }
+   for(i=0;i<n;i++){
+       int sum=0;
+       for(j=i;j<n;j++){
+           sum+=a[j];
+            
+           if(sum==0){
+                int  new_len=j-i+1;
+               for(int k=i;k<=j;k++){
+                       printf("%d ",a[k]);
+                       
+                 
+               }
+             printf("\n");
+           
+           if(length<new_len){
+               length=new_len;
+           }
+           } 
+           
+           
+           
+       }
+   }
+   printf("the biggest length is %d",length);
+   return 0;
+}

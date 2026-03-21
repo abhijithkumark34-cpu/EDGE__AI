@@ -1,0 +1,49 @@
+#include<stdio.h>
+int main(){
+    int n,i,length=0;
+    printf("enter the number of elements in the array");
+    scanf("%d",&n);
+    int a[n];
+    printf("Enter all  the elements in the array");
+    for( i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    int k[n];
+     for( i=0;i<n;i++){
+      k[i]=a[i];
+     }
+     for( i=0;i<n;i++){
+         if(a[i]==0){
+             a[i]=-1;
+         }
+         else{
+             a[i]=1;
+         }
+}
+for( i=0;i<n;i++){
+    
+    int sum=a[i];
+    for(int j=i+1;j<n;j++){
+        sum+=a[j];
+        if(sum==0){
+            int new_len=0;
+            for(int g=i;g<=j;g++){
+                printf("%d  ",k[g]);
+                new_len++;
+                
+            
+            }
+            
+            printf("length=%d",new_len);
+            if(new_len>length){
+                length=new_len;
+            }
+        }
+        
+    }
+    printf("\n");
+    
+}
+printf("the biggest length is =%d",length);
+return 0;
+}

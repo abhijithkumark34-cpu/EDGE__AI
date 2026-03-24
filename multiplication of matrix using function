@@ -1,1 +1,53 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+void multiply(int a[10][10],int b[10][10],int c[10][10],int m,int n,int p,int q);
 
+int main() {
+    int m,n,p,q;
+    printf("Enter the number of roes and coloum for mtrix A");
+    scanf("%d%d",&m,&n);
+     printf("Enter the number of roes and coloum for mtrix B");
+     scanf("%d%d",&p,&q);
+     int a[m][n];
+     int b[p][q];
+     int c[m][q];
+     
+   printf("Enter all elements in matrix 1");
+    for(int i=0;i<m;i++){
+        for(int j=0;j<n;j++){
+            scanf("%d",&a[m][n]);
+        }
+    }
+    printf("Enter all elements in the matrix 2");
+     for(int i=0;i<m;i++){
+        for(int j=0;j<n;j++){
+            scanf("%d",&b[m][n]);
+        }
+     }
+     multiply(a,b,c,m,n,p,q);
+     return 0;
+}
+void multiply(int a[10][10],int b[10][10],int c[10][10],int m,int n,int p,int q){
+       for(int i=0;i<m;i++){
+        for(int j=0;j<q;j++){
+            c[i][j]=0;
+             for(int k=0;k<n;k++){
+                 for(int v=0;v<p;v++){
+                 c[i][j]=c[i][j]+a[i][n]*b[v][j];
+                 }
+             }
+        }
+       }
+           for(int i=0;i<m;i++){
+        for(int j=0;j<q;j++){
+            printf("%d",c[i][j]);
+        }
+           }
+       
+            
+
+     
+     
+
+    
+}

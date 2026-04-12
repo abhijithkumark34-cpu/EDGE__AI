@@ -1,0 +1,15 @@
+today i wrote a small code but very rich in concept
+
+also i checked the working in real aurdino atmega325
+here is the code 
+
+void setup(){
+  DDRB |=(1<<5);//tells output is in pin 13
+
+}
+void loop(){
+  PORTB|=(1<<5);//turns led on
+  delay(1000);
+  PORTB &=~(1<<5);//turns led off
+  delay(1000);
+}
